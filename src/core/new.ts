@@ -1,5 +1,5 @@
 import { CommandOptions } from "../types/command"
-import { copy, copyDir, emptyDir, write } from "../utils/file"
+import { copy, copyDir, emptyDir } from "../utils/file"
 import { prompt } from "enquirer"
 import colors from "picocolors"
 import path from "path"
