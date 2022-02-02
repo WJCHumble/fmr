@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "description": "A tool for managing JavaScript projects with multiple packages,  powered by [turborepo](https://github.com/vercel/turborepo), [pnpm](https://github.com/pnpm/pnpm) and [changesets](https://github.com/changesets/changesets).",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "bin": {
+    "tsup": "dist/index.js"
+  },
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "template-*",
+    "node_modules"
   ],
   "scripts": {
-    "start": "node dist/index.js init --type ts",
-    "dev": "npm run build -- --watch",
-    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "start": "node dist/index.cjs new rotate-demo --type ts2",
+    "dev": "npm run build-fast -- --watch",
+    "build": "tsup src/index.ts  --clean --splitting",
+    "build-fast": "npm run build -- --no-dts",
     "prepublishOnly": "npm run build"
   },
   "type": "module",
@@ -34,7 +39,8 @@
   "packageManager": "pnpm@6.29.0",
   "dependencies": {
     "cac": "^6.7.12",
-    "chalk": "^5.0.0",
+    "enquirer": "^2.3.6",
+    "picocolors": "^1.0.0",
     "shelljs": "^0.8.5"
   },
   "devDependencies": {

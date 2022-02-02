@@ -1,4 +1,4 @@
-import { CommandOptions } from "../types"
+import { CommandOptions } from "../types/command"
 
 export const useCommand = (cac: any, commandOptions: CommandOptions) => {
 	const {
@@ -12,7 +12,7 @@ export const useCommand = (cac: any, commandOptions: CommandOptions) => {
 	cac.name = name
 	const cli = cac
 								.command(...command)
-	// resolve multiple options
+	// resolve multiple option
 	if (options) {
 		Object.entries(options).forEach((option: string[]) => {
 			cli.option(...option)
