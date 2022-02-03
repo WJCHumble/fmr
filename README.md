@@ -1,6 +1,6 @@
 ## rotate
 
-A tool for managing JavaScript projects with multiple packages,  powered by [turborepo](https://github.com/vercel/turborepo), [pnpm](https://github.com/pnpm/pnpm) and [changesets](https://github.com/changesets/changesets).
+A CLI that lets you experience **modern monorepo** projects quickly and easily,  powered by [turborepo](https://github.com/vercel/turborepo), [pnpm](https://github.com/pnpm/pnpm) and [changesets](https://github.com/changesets/changesets).
 
 ## Install
 
@@ -16,7 +16,7 @@ npm i rotate -g
 
 You can install it locally in your project folder, but it's not recommended, because it's not inconvenient to use `rotate new [project]`.
 
-## Commands
+## Command
 
 Overview:
 
