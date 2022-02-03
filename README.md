@@ -1,6 +1,6 @@
 ## rotate
 
-A CLI that lets you experience **modern monorepo** projects quickly and easily,  powered by [turborepo](https://github.com/vercel/turborepo), [pnpm](https://github.com/pnpm/pnpm) and [changesets](https://github.com/changesets/changesets).
+A CLI that lets you experience **modern monorepo** project quickly and easily, powered by [turborepo](https://github.com/vercel/turborepo), [pnpm](https://github.com/pnpm/pnpm) and [changesets](https://github.com/changesets/changesets).
 
 ## Install
 
@@ -14,7 +14,7 @@ yarn add rotate -g
 npm i rotate -g
 ```
 
-You can also install it locally in your project folder, but it's not recommended, because it's not inconvenient to use `rotate new [project]`.
+You can also install it locally in your project, but it's not recommended, because it's not inconvenient to use `rotate new [project]` command.
 
 ## Command
 
@@ -24,7 +24,3 @@ Overview:
 - [`rotate add`]()
 - [`rotate publish`]()
 - [`rotate run`]()
-
-### rotate new
-
->TODO:
