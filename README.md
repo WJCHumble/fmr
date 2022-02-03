@@ -14,7 +14,7 @@ yarn add rotate -g
 npm i rotate -g
 ```
 
-You can install it locally in your project folder, but it's not recommended, because it's not inconvenient to use `rotate new [project]`.
+You can also install it locally in your project folder, but it's not recommended, because it's not inconvenient to use `rotate new [project]`.
 
 ## Command
 
