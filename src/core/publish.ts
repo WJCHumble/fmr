@@ -4,7 +4,9 @@ const publish: CommandOptions = {
 	name: "publish",
 	command: ["publish", ""],
 	options: {},
-	action: (...args) => {}
+	action: (...args) => {
+		// TODO: use changesets to publish
+	}
 }
 
 export default publish

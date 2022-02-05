@@ -4,7 +4,9 @@ const run: CommandOptions = {
 	name: "run",
 	command: ["run", ""],
 	options: {},
-	action: (...args) => {}
+	action: (...args) => {
+		// TODO: use turbo to execute
+	}
 }
 
 export default run

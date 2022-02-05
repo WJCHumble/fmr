@@ -10,8 +10,7 @@ export const useCommand = (cac: any, commandOptions: CommandOptions) => {
 	} = commandOptions
 
 	cac.name = name
-	const cli = cac
-								.command(...command)
+	const cli = cac.command(...command)
 	// resolve multiple option
 	if (options) {
 		Object.entries(options).forEach((option: string[]) => {

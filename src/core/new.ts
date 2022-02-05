@@ -18,6 +18,10 @@ const newMonorepo: CommandOptions = {
 	action: async (...args) => {
 		const cwd = process.cwd()
 		let [ targetDir, option ] = args;
+		if (option?.type && !['ts', 'js'].includes(option?.type)) {
+			throw new Error(`[rotate new] --type option value should be the 'ts' or 'js'`)
+		}
+		
 		if (!targetDir) {
 			const { name } = (await prompt({
 				type: "input",
@@ -29,7 +33,7 @@ const newMonorepo: CommandOptions = {
 		}
 		// initial root dir
 		const root = path.join(cwd, targetDir)
-		console.log(`${colors.blue("[init]")} created monorepo project in ${root}`)
+		console.log(`${colors.blue("[rotate new]")} created monorepo project in ${root}`)
 
 		if (!fs.existsSync(root)) {
 			fs.mkdirSync(root, { recursive: true })
@@ -51,13 +55,9 @@ const newMonorepo: CommandOptions = {
 				}
 			}
 		}
-		if (option?.type && !option?.type.includes(['ts', 'js'])) {
-			throw new Error(`[init] --type option value should be the 'ts' or 'js'`)
-		}
 		// select template
 		const language = option?.type || 'js';
 		const templateDir = path.join(__dirname, `template-${language}`);
-		const files = fs.readdirSync(templateDir)
 
 		const write = (file: string, content?: string) => {
 			const targetPath = RENAMEFILES[file]
@@ -69,7 +69,8 @@ const newMonorepo: CommandOptions = {
 				copy(path.join(templateDir, file), targetPath)
 			}
 		}
-		
+		const files = fs.readdirSync(templateDir)
+		debugger
 		for (const file of files.filter((f) => f !== 'package.json')) {
 			write(file)
 		}
@@ -77,7 +78,7 @@ const newMonorepo: CommandOptions = {
 		const pkg = require(path.join(templateDir, `package.json`))
 		pkg.name = path.basename(root)
 		write('package.json', JSON.stringify(pkg, null, 2))
-		console.log(`${colors.green('[init]')} done, now run:\n`)
+		console.log(`${colors.green('[rotate new]')} done, now run:\n`)
 		if (root !== cwd) {
 			console.log(`  cd ${path.relative(cwd, root)}\n`)
 		}
