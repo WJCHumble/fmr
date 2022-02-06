@@ -17,17 +17,17 @@ npm i fmr -g
 
 Overview:
 
-- [`rotate new`]()
-- [`rotate add`]()
-- [`rotate publish`]()
-- [`rotate run`]()
+- [`fmr new`]()
+- [`fmr add`]()
+- [`fmr publish`]()
+- [`fmr run`]()
 
-### rotate new
+### fmr new
 
 
 
-### rotate add
+### fmr add
 
-### rotate publish
+### fmr publish
 
-### rotate run
+### fmr run

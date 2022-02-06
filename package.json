@@ -1,28 +1,28 @@
 {
   "name": "fmr",
-  "version": "0.0.2-beta1",
+  "version": "0.0.2-beta3",
   "description": "A tool for managing JavaScript projects with multiple packages,  powered by [turborepo](https://github.com/vercel/turborepo), [pnpm](https://github.com/pnpm/pnpm) and [changesets](https://github.com/changesets/changesets).",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
   "bin": {
-    "fmr": "dist/index.js"
+    "fmr": "dist/index.cjs"
   },
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "template-*",
+    "templates",
     "node_modules"
   ],
   "scripts": {
+    "start": "node dist/index.cjs new monorepo",
     "dev": "npm run build-fast -- --watch",
-    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "build": "tsup src/index.ts --dts --format cjs",
     "build-fast": "npm run build -- --no-dts",
     "prepublishOnly": "npm run build"
   },
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WJCHumble/rotate.git"
+    "url": "git+https://github.com/WJCHumble/fmr.git"
   },
   "keywords": [
     "monorepo",
@@ -33,9 +33,9 @@
   "author": "wuliu <wujingchang5@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WJCHumble/rotate/issues"
+    "url": "https://github.com/WJCHumble/fmr/issues"
   },
-  "homepage": "https://github.com/WJCHumble/rotate#readme",
+  "homepage": "https://github.com/WJCHumble/fmr#readme",
   "packageManager": "pnpm@6.29.0",
   "dependencies": {
     "@changesets/cli": "^2.20.0",

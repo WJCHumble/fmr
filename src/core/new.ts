@@ -57,7 +57,7 @@ const newMonorepo: CommandOptions = {
 		}
 		// select template
 		const language = option?.type || 'js';
-		const templateDir = path.join(__dirname, `template-${language}`);
+		const templateDir = path.join(__dirname, `templates/template-${language}`);
 
 		const write = (file: string, content?: string) => {
 			const targetPath = RENAMEFILES[file]
