@@ -1,5 +1,5 @@
 import { CommandOptions } from "../types/command"
-import { copy, copyDir, emptyDir } from "../utils/file"
+import { copy, emptyDir } from "../utils/file"
 import { prompt } from "enquirer"
 import colors from "picocolors"
 import path from "path"
@@ -19,21 +19,21 @@ const newMonorepo: CommandOptions = {
 		const cwd = process.cwd()
 		let [ targetDir, option ] = args;
 		if (option?.type && !['ts', 'js'].includes(option?.type)) {
-			throw new Error(`[rotate new] --type option value should be the 'ts' or 'js'`)
+			throw new Error(`[fmr new] --type option value should be the 'ts' or 'js'`)
 		}
-		
+
 		if (!targetDir) {
 			const { name } = (await prompt({
 				type: "input",
 				name: "name",
 				message: "Project name:",
-				initial: "rotate-demo"
+				initial: "fmr-demo"
 			}) as any)
 			targetDir = name
 		}
 		// initial root dir
 		const root = path.join(cwd, targetDir)
-		console.log(`${colors.blue("[rotate new]")} created monorepo project in ${root}`)
+		console.log(`${colors.blue("[fmr new]")} created monorepo project in ${root}`)
 
 		if (!fs.existsSync(root)) {
 			fs.mkdirSync(root, { recursive: true })
@@ -70,7 +70,6 @@ const newMonorepo: CommandOptions = {
 			}
 		}
 		const files = fs.readdirSync(templateDir)
-		debugger
 		for (const file of files.filter((f) => f !== 'package.json')) {
 			write(file)
 		}
@@ -78,7 +77,7 @@ const newMonorepo: CommandOptions = {
 		const pkg = require(path.join(templateDir, `package.json`))
 		pkg.name = path.basename(root)
 		write('package.json', JSON.stringify(pkg, null, 2))
-		console.log(`${colors.green('[rotate new]')} done, now run:\n`)
+		console.log(`${colors.green('[fmr new]')} done, now run:\n`)
 		if (root !== cwd) {
 			console.log(`  cd ${path.relative(cwd, root)}\n`)
 		}

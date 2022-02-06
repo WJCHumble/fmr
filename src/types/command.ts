@@ -4,5 +4,6 @@ export interface CommandOptions {
 	command: string[],
 	options?: Record<string, string>,
 	option?: string[],
+	allowUnknownOptions?: boolean,
 	action: (...args: any[]) => void
 }

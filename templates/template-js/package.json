@@ -8,16 +8,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rotate add",
-    "build": "rotate run build",
-    "test": "rotate test",
-    "publish": "rotate publish"
+    "start": "fmr add",
+    "build": "fmr run build",
+    "clean": "fmr run clean",
+    "test": "fmr run test",
+    "publish": "fmr publish"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@6.29.0",
   "devDependencies": {
-    "rotate": "@0.0.1"
+    "fmr": "@0.0.1"
   }
 }

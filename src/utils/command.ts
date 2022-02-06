@@ -6,7 +6,8 @@ export const useCommand = (cac: any, commandOptions: CommandOptions) => {
 		command,
 		options,
 		option,
-		action
+		action,
+		allowUnknownOptions
 	} = commandOptions
 
 	cac.name = name
@@ -20,6 +21,10 @@ export const useCommand = (cac: any, commandOptions: CommandOptions) => {
 	// resolve single option
 	if (option) {
 		cli.option(...option)
+	}
+
+	if (allowUnknownOptions) {
+		cli.allowUnknownOptions()
 	}
 	cli.action(action)
 }

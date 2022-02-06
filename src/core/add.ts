@@ -1,6 +1,5 @@
 import { CommandOptions } from "../types/command"
 import { cd, exec } from "shelljs"
-import fs from "fs"
 import path from "path"
 
 const add: CommandOptions = {
@@ -15,7 +14,7 @@ const add: CommandOptions = {
 		const cwd = process.cwd()
 		const installPkgs = args[0]
 		if (!installPkgs?.length) {
-			throw new Error("[rotate add] you must add install npm package's name")
+			throw new Error("[fmr add] you must add install npm package's name")
 		}
 		let {
 			S,

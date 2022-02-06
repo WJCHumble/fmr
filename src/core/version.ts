@@ -3,16 +3,16 @@ import { exec } from "shelljs"
 import { isRootExecute } from "../utils"
 import colors from "picocolors"
 
-const publish: CommandOptions = {
-	name: "publish",
-	command: ["publish", ""],
+const version: CommandOptions = {
+	name: "version",
+	command: ["version", ""],
 	options: {},
 	action: (...args) => {
 		isRootExecute()
-		const command = `npx changeset publish`
-		console.log(`${colors.blue("[fmr publish]")} ${command}`)
+		const command = `npx changeset version`
+		console.log(`${colors.blue("[fmr version]")} ${command}`)
 		exec(command)
 	}
 }
 
-export default publish
+export default version
