@@ -35,7 +35,7 @@ Create a new monorepo project
 Command options:
 
   --type ts       monorepo with typescript
-  --type ts       monorepo with javascript
+  --type js       monorepo with javascript
 ```
 
 ### fmr add
