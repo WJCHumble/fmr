@@ -19,15 +19,63 @@ Overview:
 
 - [`fmr new`]()
 - [`fmr add`]()
-- [`fmr publish`]()
 - [`fmr run`]()
+- [`fmr publish`]()
+- [`fmr version`]()
 
 ### fmr new
 
+Usage:
 
+```bash
+fmr new <project>
+
+Create a new monorepo project
+
+Command options:
+
+  --type ts       monorepo with typescript
+  --type ts       monorepo with javascript
+```
 
 ### fmr add
 
-### fmr publish
+Usage:
+
+```bash
+fmr add <package>
+
+Command options:
+
+  --scope <name>  install package in scope
+  --save-dev
+  -S
+  --dev
+  -D
+```
+
+>Note that you don't set `--scope`, the package will be installed in root.
 
 ### fmr run
+
+Usage:
+
+```bash
+fmr run <command>
+```
+
+### fmr publish
+
+Usage:
+
+```bash
+fmr publish
+```
+
+### fmr version
+
+Usage:
+
+```bash
+fmr version
+```

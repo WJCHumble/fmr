@@ -12,11 +12,7 @@ const cli = cac("rotate")
 useCommand(cli, newMonorepo)
 useCommand(cli, add)
 useCommand(cli, publish)
-try {
-	useCommand(cli, run)
-} catch(e) {
-	debugger
-}
+useCommand(cli, run)
 useCommand(cli, version)
 
 cli.help()

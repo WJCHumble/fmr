@@ -24,8 +24,10 @@ const add: CommandOptions = {
 			scope
 		} = args[1];
 		const pnpmWorkspaceFile = path.join(cwd, 'pnpm-workspace.yaml')
-		if (!pnpmWorkspaceFile && scope) {
+		let isRootInstall = true
+		if (pnpmWorkspaceFile && scope) {
 			cd(`packages/${scope}`)
+			isRootInstall = false
 		}
 		let pnpmInstallOption = ""
 		if (S || saveDev) {
@@ -35,7 +37,7 @@ const add: CommandOptions = {
 			pnpmInstallOption = '-D'
 		}
 
-		exec(`pnpm add ${installPkgs.join(" ")} ${pnpmInstallOption}`)
+		exec(`pnpm add ${installPkgs.join(" ")} ${pnpmInstallOption} ${isRootInstall ? '-w':''}`)
 		cd(`../../`)
 	}
 }

@@ -55,9 +55,11 @@ const newMonorepo: CommandOptions = {
 				}
 			}
 		}
+		// create a empty packages dir
+		fs.mkdirSync(`${root}/packages`, { recursive: true })
 		// select template
 		const language = option?.type || 'js';
-		const templateDir = path.join(__dirname, `templates/template-${language}`);
+		const templateDir = path.join(__dirname, `../templates/template-${language}`);
 
 		const write = (file: string, content?: string) => {
 			const targetPath = RENAMEFILES[file]

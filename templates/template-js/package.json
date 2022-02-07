@@ -17,8 +17,5 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@6.29.0",
-  "devDependencies": {
-    "fmr": "@0.0.1"
-  }
+  "packageManager": "pnpm@6.29.0"
 }
