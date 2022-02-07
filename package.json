@@ -12,8 +12,6 @@
     "node_modules"
   ],
   "scripts": {
-    "test": "fmr new monorepo",
-    "start": "node dist/index.cjs new monorepo",
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
