@@ -1,5 +1,7 @@
 ## fmr
 
+<a href="https://www.npmjs.com/package/fmr"><img src="https://img.shields.io/npm/v/fmr"/></a>
+
 A CLI that lets you experience **modern monorepo** project quickly and easily, powered by [turborepo](https://github.com/vercel/turborepo), [pnpm](https://github.com/pnpm/pnpm) and [changesets](https://github.com/changesets/changesets).
 
 ## Install
