@@ -19,11 +19,11 @@ npm i fmr -g
 
 Overview:
 
-- [`fmr new`]()
-- [`fmr add`]()
-- [`fmr run`]()
-- [`fmr publish`]()
-- [`fmr version`]()
+- [`fmr new`](https://github.com/WJCHumble/fmr#fmr-new)
+- [`fmr add`](https://github.com/WJCHumble/fmr#fmr-add)
+- [`fmr run`](https://github.com/WJCHumble/fmr#fmr-run)
+- [`fmr publish`](https://github.com/WJCHumble/fmr#fmr-publish)
+- [`fmr version`](https://github.com/WJCHumble/fmr#fmr-version)
 
 ### fmr new
 
