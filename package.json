@@ -1,6 +1,6 @@
 {
   "name": "fmr",
-  "version": "0.0.2-beta9",
+  "version": "0.0.3",
   "description": "A CLI that lets you experience modern monorepo project quickly and easily",
   "main": "dist/index.cjs",
   "bin": {
