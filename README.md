@@ -56,7 +56,7 @@ Command options:
   -D
 ```
 
->Note that you don't set `--scope`, the package will be installed in root.
+>Note that if you don't set `--scope`, the package will be installed in root.
 
 ### fmr run
 
