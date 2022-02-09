@@ -12,8 +12,14 @@ const add: CommandOptions = {
 	},
 	action: (...args) => {
 		const cwd = process.cwd()
+		const pnpmWorkspaceFile = path.join(cwd, 'pnpm-workspace.yaml')
 		const installPkgs = args[0]
 		if (!installPkgs?.length) {
+			// run `pnpm insall` in workspace
+			if (pnpmWorkspaceFile) {
+				exec(`pnpm install`)
+				return
+			}
 			throw new Error("[fmr add] you must add install npm package's name")
 		}
 		let {
@@ -23,7 +29,6 @@ const add: CommandOptions = {
 			dev,
 			scope
 		} = args[1];
-		const pnpmWorkspaceFile = path.join(cwd, 'pnpm-workspace.yaml')
 		let isRootInstall = true
 		if (pnpmWorkspaceFile && scope) {
 			cd(`packages/${scope}`)
