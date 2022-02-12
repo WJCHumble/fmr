@@ -9,7 +9,7 @@ const version: CommandOptions = {
 	options: {},
 	action: (...args) => {
 		isRootExecute()
-		const command = `npx changeset version`
+		const command = `pnpm changeset version`
 		console.log(`${colors.blue("[fmr version]")} ${command}`)
 		exec(command)
 	}
