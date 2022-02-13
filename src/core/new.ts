@@ -6,7 +6,8 @@ import path from "path"
 import fs from "fs"
 
 const RENAMEFILES = {
-	_gitignore: ".gitignore"
+	_gitignore: ".gitignore",
+	_npmrc: ".npmrc"
 }
 
 const newMonorepo: CommandOptions = {
