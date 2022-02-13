@@ -5,6 +5,7 @@ import add from "./core/add"
 import publish from "./core/publish"
 import run from "./core/run"
 import version from "./core/version"
+import changeset  from "./core/changeset"
 import { useCommand } from "./utils/command"
 
 const cli = cac("rotate")
@@ -14,6 +15,7 @@ useCommand(cli, add)
 useCommand(cli, publish)
 useCommand(cli, run)
 useCommand(cli, version)
+useCommand(cli, changeset)
 
 cli.help()
 cli.version(pkg.version)
