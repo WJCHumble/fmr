@@ -29,8 +29,9 @@ npm i fmr -g
 - [`fmr new`](https://github.com/WJCHumble/fmr#fmr-new)
 - [`fmr add`](https://github.com/WJCHumble/fmr#fmr-add)
 - [`fmr run`](https://github.com/WJCHumble/fmr#fmr-run)
-- [`fmr publish`](https://github.com/WJCHumble/fmr#fmr-publish)
+- [`fmr changeset`](https://github.com/WJCHumble/fmr#fmr-changeset)
 - [`fmr version`](https://github.com/WJCHumble/fmr#fmr-version)
+- [`fmr publish`](https://github.com/WJCHumble/fmr#fmr-publish)
 
 ### fmr new
 
@@ -73,12 +74,12 @@ Command options:
 fmr run <command>
 ```
 
-### fmr publish
+### fmr changeset
 
 使用:
 
 ```bash
-fmr publish
+fmr changeset
 ```
 
 ### fmr version
@@ -87,4 +88,12 @@ fmr publish
 
 ```bash
 fmr version
+```
+
+### fmr publish
+
+使用:
+
+```bash
+fmr publish
 ```

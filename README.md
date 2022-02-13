@@ -29,8 +29,9 @@ Overview:
 - [`fmr new`](https://github.com/WJCHumble/fmr#fmr-new)
 - [`fmr add`](https://github.com/WJCHumble/fmr#fmr-add)
 - [`fmr run`](https://github.com/WJCHumble/fmr#fmr-run)
-- [`fmr publish`](https://github.com/WJCHumble/fmr#fmr-publish)
+- [`fmr changeset`](https://github.com/WJCHumble/fmr#fmr-changeset)
 - [`fmr version`](https://github.com/WJCHumble/fmr#fmr-version)
+- [`fmr publish`](https://github.com/WJCHumble/fmr#fmr-publish)
 
 ### fmr new
 
@@ -88,6 +89,7 @@ Usage:
 ```bash
 fmr version
 ```
+
 ## Command
 
 Overview:
@@ -138,13 +140,12 @@ Usage:
 ```bash
 fmr run <command>
 ```
-
-### fmr publish
+### fmr changeset
 
 Usage:
 
 ```bash
-fmr publish
+fmr changeset
 ```
 
 ### fmr version
@@ -154,3 +155,12 @@ Usage:
 ```bash
 fmr version
 ```
+
+### fmr publish
+
+Usage:
+
+```bash
+fmr publish
+```
+
