@@ -9,7 +9,7 @@ const publish: CommandOptions = {
 	options: {},
 	action: (...args) => {
 		isRootExecute()
-		const command = `pnpm publish -r`
+		const command = `pnpm changeset publish`
 		console.log(`${colors.blue("[fmr publish]")} ${command}`)
 		exec(command)
 	}

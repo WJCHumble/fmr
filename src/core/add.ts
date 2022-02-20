@@ -30,20 +30,21 @@ const add: CommandOptions = {
 			scope
 		} = args[1];
 		let isRootInstall = true
+		let filterOpt = "--filter "
 		if (pnpmWorkspaceFile && scope) {
-			cd(`packages/${scope}`)
+			filterOpt += scope
 			isRootInstall = false
 		}
-		let pnpmInstallOption = ""
+
+		let installType = ""
 		if (S || saveDev) {
-			pnpmInstallOption = '-S'
+			installType = '-S'
 		} 
 		if (D || dev) {
-			pnpmInstallOption = '-D'
+			installType = '-D'
 		}
 
-		exec(`pnpm add ${installPkgs.join(" ")} ${pnpmInstallOption} ${isRootInstall ? '-w':''}`)
-		cd(`../../`)
+		exec(`pnpm add ${installPkgs.join(" ")} ${installType} ${isRootInstall ? '-w': filterOpt}`)
 	}
 }
 
