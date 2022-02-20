@@ -9,7 +9,7 @@ A CLI that lets you experience **modern monorepo** project quickly and easily, p
 Features:
 
 - Create a monorepo template project
-- Use pnpm to install the dependencies of a specified range of packages
+- Use pnpm as a package manager
 - Use turborepo to preform multiple package script tasks
 ## Install
 
@@ -131,7 +131,7 @@ Command options:
   -D
 ```
 
->Note that if you don't set `--scope`, the package will be installed in root.
+Note that if you don't set `--scope`, the package will be installed in root.
 
 ### fmr run
 
@@ -164,3 +164,13 @@ Usage:
 fmr publish
 ```
 
+Note that if you want to publish to a private `registry`, you should add  `publicConfig.registry` to `packagejson` of the published package, for example:
+
+```json
+{
+  ...
+  "publicConfig": {
+    "registry": "http://localhost:4873"
+  }
+}
+```
