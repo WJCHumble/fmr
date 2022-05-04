@@ -3,6 +3,7 @@ import { exec } from "shelljs"
 import { isRootExecute } from "../utils"
 import colors from "picocolors"
 
+// TODO: try to use changeset package to refactor it
 const version: CommandOptions = {
 	name: "version",
 	command: ["version", ""],
