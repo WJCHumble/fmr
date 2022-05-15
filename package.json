@@ -1,6 +1,6 @@
 {
   "name": "fmr",
-  "version": "0.0.3-beta3",
+  "version": "0.0.3-beta4",
   "description": "A CLI that lets you experience modern monorepo project quickly and easily",
   "main": "dist/index.cjs",
   "bin": {
@@ -39,6 +39,7 @@
     "decamelize-keys": "^1.1.0",
     "enquirer": "^2.3.6",
     "picocolors": "^1.0.0",
+    "semver": "^7.3.5",
     "shelljs": "^0.8.5",
     "turbo": "^1.1.2"
   },
